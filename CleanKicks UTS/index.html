@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanKicks - Jasa Cuci Sepatu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- 01. HEADER / HERO: ubah nama usaha, judul, dan deskripsi di bagian ini. -->
+    <header class="hero" id="top">
+        <div class="container">
+            <span class="badge">CLEANKICKS SHOE CARE</span>
+            <h1>Sepatu Bersih, Siap Dipakai Lagi</h1>
+            <p>Jasa perawatan sepatu yang praktis untuk aktivitas sehari-hari.</p>
+            <a class="hero-button" href="#services">Lihat Layanan</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 02. DAFTAR LAYANAN: kartu layanan dibuat otomatis dari array di script.js. -->
+        <section id="services" class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PILIHAN LAYANAN</p>
+                    <h2>Layanan CleanKicks</h2>
+                </div>
+                <p>Pilih layanan yang sesuai dengan kebutuhan sepatu kamu.</p>
+            </div>
+            <div id="serviceList" class="service-grid">
+                <!-- JavaScript menampilkan kartu layanan di sini. -->
+            </div>
+        </section>
+
+        <!-- 03. FORM BOOKING: form sederhana, hanya data utama yang diperlukan. -->
+        <section id="booking" class="section-block booking-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PEMESANAN</p>
+                    <h2>Booking Layanan</h2>
+                </div>
+                <p>Isi data di bawah ini untuk membuat pesanan demo.</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="customerName">Nama pelanggan</label>
+                        <input id="customerName" name="customerName" type="text" placeholder="Contoh: Andi" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="customerPhone">Nomor WhatsApp</label>
+                        <input id="customerPhone" name="customerPhone" type="tel" placeholder="Contoh: 081234567890" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="serviceType">Jenis layanan</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Pilih layanan</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="shoeQuantity">Jumlah sepatu</label>
+                        <input id="shoeQuantity" name="shoeQuantity" type="number" min="1" max="10" value="1" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="orderDate">Tanggal booking</label>
+                        <input id="orderDate" name="orderDate" type="date" required>
+                    </div>
+                </div>
+
+                <!-- 04. RINGKASAN: total berubah saat layanan atau jumlah diganti. -->
+                <div class="price-summary">
+                    <span>Perkiraan total</span>
+                    <strong id="totalPrice">Rp0</strong>
+                </div>
+                <button class="primary-button" type="submit">Buat Pesanan</button>
+            </form>
+
+            <!-- 05. HASIL BOOKING: pesan berhasil ditampilkan setelah form valid. -->
+            <div id="bookingResult" class="booking-result" hidden aria-live="polite"></div>
+        </section>
+    </main>
+
+    <!-- 06. FOOTER: ubah teks penutup atau nama usaha di sini. -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="currentYear"></span> CleanKicks Shoe Care</p>
+            <a href="#top">Kembali ke atas ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
